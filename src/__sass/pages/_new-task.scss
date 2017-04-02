@@ -1,0 +1,48 @@
+@import "../color-variables";
+
+.new-task-page {
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.new-task-page__current-date {
+  margin: 0 0 10px;
+}
+
+.new-task-page__current-date__label {
+  color: $grey;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  margin-right: 10px;
+}
+
+.new-task-page__current-date__date-time-timer {
+  font-size: 18px;
+}
+
+.new-task-page__value-label {
+  color: $grey;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.new-task-page__task-value__error {
+  text-align: center;
+  color: $bright-red;
+  padding: 5px 0;
+  min-height: 29px;
+  &.hidden {
+    visibility: hidden;
+  }
+}
+
+.new-task-page__button-section {
+  display: flex;
+  justify-content: center;
+  button:not(:last-child) {
+    margin-right: 50px;
+  }
+}

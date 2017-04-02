@@ -1,0 +1,36 @@
+@import "../../color-variables";
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 to 20 {
+  .card-layout__#{$i}-elements-per-row > .card-item__adaptive {
+    width: 100%;
+    @for $j from 1 to $i {
+      &.item-#{$j}-growth {
+        flex-basis: 100% / $i * $j;
+      }
+    }
+  }
+}
+
+.card-item {
+  position: relative;
+  display: flex;
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.card-item__content {
+  width: 100%;
+  border: 1px solid $grey-light;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 $grey-light;
+  transition: box-shadow .3s ease;
+  &:hover {
+    box-shadow: 0 4px 12px 0 $grey;
+  }
+}
+

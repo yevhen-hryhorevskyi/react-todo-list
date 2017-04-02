@@ -1,0 +1,20 @@
+@import "../color-variables";
+
+.page-title {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 2px 2px 1px $blue;
+  color: lighten($blue, 5%);
+  margin: 20px 0 20px 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  user-select: none;
+  cursor: default;
+  transition: all .5s ease;
+  &:hover {
+    color: $blue;
+    text-shadow: 2px 2px 1px $blue-dark;
+  }
+}

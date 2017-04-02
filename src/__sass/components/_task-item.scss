@@ -1,0 +1,65 @@
+@import "../color-variables";
+@import "../icons/cross";
+
+.task-item {
+  position: relative;
+  padding: 14px 18px;
+  height: 100%;
+  background-color: transparentize($blue, .9);
+  &.completed {
+    background-color: transparentize($green, .8);
+  }
+}
+
+.task-item__created-row {
+  margin-bottom: 15px;
+  padding-right: 20px;
+  font-size: 16px;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background: url($cross-red);
+    background-size: 16px;
+  }
+  &:hover:before {
+    background: url($cross-bright-red);
+    background-size: 16px;
+  }
+}
+
+.task-item__value {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-line;
+  font-style: italic;
+  margin-bottom: 48px;
+  &.completed {
+    text-decoration: line-through;
+  }
+}
+
+.task-item__footer {
+  position: absolute;
+  height: 28px;
+  bottom: 14px;
+  left: 18px;
+  right: 18px;
+}
+
+.task-item__footer__active {
+  text-align: center;
+}
+
+.task-item__footer__completed {
+  font-size: 16px;
+  line-height: 28px;
+}

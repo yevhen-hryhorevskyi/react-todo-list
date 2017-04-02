@@ -1,0 +1,67 @@
+@import "../color-variables";
+
+.task-list-page__create-btn,
+.task-list-page__create-btn:active {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  padding: 0 10px;
+  min-width: 70px;
+  background: $green;
+  border-color: darken($green, 5%);
+  border-radius: 3px;
+  line-height: 28px;
+  color: white !important;
+  cursor: pointer;
+  user-select: none;
+  &:hover {
+    background: darken($green, 10%);
+    border-color: darken($green, 15%);
+  }
+}
+
+.task-list-page__filter-container {
+  margin: 48px 0 20px;
+  display: flex;
+  justify-content: center;
+  .task-list-page__filter:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.task-list-page__filter {
+  display: inline-block;
+  min-width: 70px;
+  line-height: 28px;
+  padding: 0 15px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  transition: all .5s ease !important;
+  &.active {
+    color: white;
+    background: $blue;
+    border-color: darken($blue, 5%);
+    &:hover {
+      color: white;
+      background: darken($blue, 10%);
+      border-color: darken($blue, 15%);
+    }
+  }
+  &:hover {
+    background-color: $grey-light;
+    border-color: $grey-light;
+  }
+}
+
+.task-list-page__empty-list-label {
+  margin: 10px auto 0;
+  text-align: center;
+  font-size: 17px;
+  color: #8c8c8c;
+  a {
+    font-size: inherit;
+    font-weight: 700;
+  }
+}

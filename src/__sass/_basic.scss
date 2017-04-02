@@ -1,0 +1,118 @@
+@import "color-variables";
+
+* {
+  box-sizing: border-box;
+  font: normal 400 15px/1.3 Sans-Serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+button {
+  display: inline-block;
+  padding: 0 10px;
+  min-width: 70px;
+  background: $green;
+  border-color: darken($green, 5%);
+  border-radius: 3px;
+  line-height: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: all .5s ease;
+  &:disabled,
+  &:disabled:hover {
+    cursor: not-allowed;
+    color: $grey;
+    background-color: $grey-light;
+    border-color: $grey-light;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: white;
+    background: darken($green, 10%);
+    border-color: darken($green, 15%);
+  }
+}
+
+button.blue {
+  background: $blue;
+  border-color: $blue-dark;
+  &:hover {
+    background: darken($blue, 10%);
+    border-color: darken($blue-dark, 10%);
+  }
+}
+
+a,
+a:visited {
+  color: $blue-link;
+  text-decoration: none;
+  transition: color .3s ease;
+  &:hover,
+  &:active {
+    color: lighten($blue-link, 10%);
+  }
+}
+
+textarea {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 5px;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  color: $dark-font;
+  background: white;
+  border: 1px solid $grey-light;
+  border-image: initial;
+  border-radius: 3px;
+  font: inherit;
+  vertical-align: baseline;
+  cursor: auto;
+  user-select: text;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: start;
+  -webkit-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+  &:disabled {
+    cursor: not-allowed;
+    color: $grey;
+    background-color: $grey-light;
+  }
+  &.error {
+    border-color: $bright-red;
+  }
+  &:focus {
+    outline: none;
+    border-color: $blue-dark;
+    box-shadow: 0 0 10px $blue-dark;
+    &.error {
+      border-color: $bright-red;
+      box-shadow: 0 0 10px $bright-red;
+    }
+  }
+}
+
+.app-container {
+  min-height: 100%;
+  position: relative;
+  overflow-x: auto;
+}
+
+.app {
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1024px;
+}
